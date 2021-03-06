@@ -4,7 +4,7 @@ metadata:
   name: minio-pv-[PV_INDEX]
 spec:
   capacity:
-    storage: [PC_SIZE]Gi
+    storage: [PV_SIZE]Gi
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
