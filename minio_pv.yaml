@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: minio-pv-[PV_INDEX]
+  name: minio-pv-[PV_INDEX]-vol-[VOLUME_INDEX]
 spec:
   capacity:
     storage: [PV_SIZE]Gi
@@ -11,7 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /volume
+    path: [VOLUME_PATH]
   nodeAffinity:
     required:
       nodeSelectorTerms:
